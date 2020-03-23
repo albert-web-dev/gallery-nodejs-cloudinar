@@ -1,0 +1,37 @@
+<style>
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 90%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      max-width: 600px;
+      min-height: 50vh;
+    }
+</style>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {{#each photos}}
+            {{#each this}}
+                {{#if this.title}}
+                    <img src="{{imageURL}}" alt="" class="swiper-slide">
+                {{/if}}
+            {{/each}}
+        {{/each}}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
